@@ -1,0 +1,3 @@
+[submodule "gitpractice/education-repo"]
+	path = gitpractice/education-repo
+	url = https://github.com/vonneumman/education-repo.git
