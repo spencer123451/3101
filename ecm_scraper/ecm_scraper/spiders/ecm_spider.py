@@ -27,12 +27,9 @@ class ECMScraperSpider(scrapy.Spider):
 
     def parse(self, response):
         """
-        Parses the response from each URL request to extract relevant data from the webpage.
-
         Input: response : scrapy.http.Response
 
-        Output:
-        dict
+        Output: dict
             A dictionary containing the extracted data from the webpage, which includes:
             - url (str): The URL of the webpage being scraped.
             - title (str or None): The text content of the <title> tag in the HTML. Returns None if not found.
@@ -47,9 +44,6 @@ class ECMScraperSpider(scrapy.Spider):
         paragraphs, and HTTP headers. The extracted data is then yielded as a dictionary, which Scrapy collects and processes
         further according to the specified output format (e.g., JSON, CSV).
 
-        Example:
-        --------
-        An example of the yielded output might look like:
     
         """
         title = response.xpath('//title/text()').get()
@@ -57,7 +51,7 @@ class ECMScraperSpider(scrapy.Spider):
         paragraphs = response.xpath('//p/text()').getall()
 
         # Extracting headers and other relevant information
-        headers = response.headers.to_unicode_dict()  # Converts headers to a readable dictionary
+        headers = response.headers.to_unicode_dict() 
 
         # Yielding all extracted data
         yield {
