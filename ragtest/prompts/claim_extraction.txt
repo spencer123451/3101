@@ -4,7 +4,6 @@ You are an intelligent assistant that helps a human analyst to analyze claims ag
 
 -Goal-
 Given a text document that is potentially relevant to this activity, an entity specification, and a claim description, extract all entities that match the entity specification and all claims against those entities.
-Ensure everything is translated to chinese at the end.
 
 -Steps-
 1. Extract all named entities that match the predefined entity specification. Entity specification can either be a list of entity names or a list of entity types.
@@ -20,7 +19,7 @@ For each claim, extract the following information:
 
 Format each claim as (<subject_entity>{tuple_delimiter}<object_entity>{tuple_delimiter}<claim_type>{tuple_delimiter}<claim_status>{tuple_delimiter}<claim_start_date>{tuple_delimiter}<claim_end_date>{tuple_delimiter}<claim_description>{tuple_delimiter}<claim_source>)
 
-3. Return output in chinese as a single list of all the claims identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+3. Return output in English as a single list of all the claims identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
 
 4. When finished, output {completion_delimiter}
 

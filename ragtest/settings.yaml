@@ -138,8 +138,10 @@ local_search:
   # max_tokens: 12000
 
 global_search:
-  # max_tokens: 12000
+  #max_tokens: 12000
   # data_max_tokens: 12000
   # map_max_tokens: 1000
   # reduce_max_tokens: 2000
   # concurrency: 32
+
+  
